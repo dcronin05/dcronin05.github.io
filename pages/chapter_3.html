@@ -44,6 +44,7 @@
 <li><a href="#311-data-information-knowledge-and-wisdom">3.1.1 Data, Information, Knowledge and Wisdom</a></li>
 <li><a href="#312-sources-and-quality-of-data">3.1.2 Sources and Quality of Data</a></li>
 <li><a href="#313-measurement-level-and-types-of-data">3.1.3 Measurement Level and Types of Data</a></li>
+<li><a href="#314-measures-of-magnitude-and-dispersion">3.1.4 Measures of Magnitude and Dispersion</a></li>
 </ul>
 </li>
 </ul>
@@ -91,7 +92,8 @@
 <p><em>Where is the wisdom we have lost in knowledge?</em></p>
 <p><em>Where is the knowledge we have lost in information?</em></p>
 <p>DIKW is illustrated in <a href="#Figure3.2">Figure 3.2</a>.</p>
-<p style="text-align: center;">
+<p style="text-align: center; margin: auto">
+<img src="file:////root/data_mining_book/figs/A81863_03_f0002.jpg">
 FIGURE 3.2 The evolution of wisdom. Source: Reproduced by permission of Gene Bellinger <a href="http://systems-thinking.org/">http://systems-thinking.org/</a></p>
 <p>     <strong>D = Data</strong> which is facts without context</p>
 <p>     <strong>I = Information</strong> which is facts with some context and perspective</p>
@@ -122,7 +124,7 @@ FIGURE 3.2 The evolution of wisdom. Source: Reproduced by permission of Gene Bel
 </tbody>
 </table>
 <p style="text-align: center;">FIGURE 3.3 Typical internal and external data in information systems.</p>
-External data is generated outside the company's own processes; it is often required to act as additional information (e.g. credit rating) or as reference values (e.g. data form Government Statistical Offices or National Statistics Institutes). or analytically focused information systems in areas such as Database Marketing (DBM) and Customer Relationship Management (CRM), external data is added frequently; there may be specifically purchased additional information about the customer's address.
+<p>External data is generated outside the company's own processes; it is often required to act as additional information (e.g. credit rating) or as reference values (e.g. data form Government Statistical Offices or National Statistics Institutes). or analytically focused information systems in areas such as Database Marketing (DBM) and Customer Relationship Management (CRM), external data is added frequently; there may be specifically purchased additional information about the customer's address.</p>
 <p>Often, the quality of internal data is better than that from external resources, not least because you can control exactly how and when the internal data was generated. Another issue with external data is that it may not match the internal data exactly in time (being contemporaneous) or location. These discrepancies should be noted, but usually, even poorly matched external data can be useful to supply additional relevant information.</p>
 <h3 id="313-measurement-level-and-types-of-data">3.1.3 Measurement Level and Types of Data</h3>
 <p>There are different types of quantitative data, all of which can have good information content. There are many different terms used to describe the different data types, and the most common words are detailed in the following.</p>
@@ -140,6 +142,82 @@ External data is generated outside the company's own processes; it is often requ
 <p>To summarize, in data mining, we consider classification or categorical variables which can be nominal, binary, and ordinal as well as scale or metric variables which can be count, continuous, interval or ratio.</p>
 <p>Qualitative data, such as pictures or text, can be summarized into quantitative data. For example, an analysis of content can be expressed in terms of counts and measured in terms of impact or quantity of relationships. Content analysis may give rise to nominal data in which the categories can be named but do not have any implied order.</p>
 <p>See Bibliography for texts including discussions of data types, qualitative and quantitative data and information quality.</p>
+<h3 id="314-measures-of-magnitude-and-dispersion">3.1.4 Measures of Magnitude and Dispersion</h3>
+<p>The measures of magnitude used in data mining are mainly the arithmetic mean, the median and the quantiles. Consider a simple situation where the expenditure in ∁ of 10 people is as follows: 34, 21, 0, 56, 24, 26, 12, 0, 14, 33 (see [Figure 3.4]). The arithmetic mean is the sum of the values divided by the number of values, so it is 220/10 = 22.0. The arithmetic mean is usually what is meant by the average. In the aforementioned example, each expenditure value is equally important, and so the average value is just the sum divided by 10. However, sometimes, the importance of data items may vary, and the weighted average value may be considered. For example, each of the expenditure values represents different segments of customers, and the segments have the following % weights: 10, 20, 5, 15, 20, 5, 5, 5, 5, 10, In this case, the weighted average is the sum of the weights times the expenditure divided by the total weight, which is 2670/100 = 26.7. The calculation is shown in the table.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Customer</strong></th>
+<th><strong>1</strong></th>
+<th><strong>2</strong></th>
+<th><strong>3</strong></th>
+<th><strong>4</strong></th>
+<th><strong>5</strong></th>
+<th><strong>6</strong></th>
+<th><strong>7</strong></th>
+<th><strong>8</strong></th>
+<th><strong>9</strong></th>
+<th><strong>10</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Expenditure</strong></td>
+<td>34</td>
+<td>21</td>
+<td>0</td>
+<td>56</td>
+<td>24</td>
+<td>26</td>
+<td>12</td>
+<td>0</td>
+<td>14</td>
+<td>33</td>
+<td>220</td>
+</tr>
+<tr>
+<td><strong>Weight</strong></td>
+<td>10</td>
+<td>20</td>
+<td>5</td>
+<td>15</td>
+<td>20</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>10</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>Product</strong></td>
+<td>340</td>
+<td>420</td>
+<td>0</td>
+<td>840</td>
+<td>480</td>
+<td>130</td>
+<td>60</td>
+<td>0</td>
+<td>70</td>
+<td>330</td>
+<td>2670</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">FIGURE 3.4 Table of sample data.</p>
+<p>In our example the weighted average is higher than the average because the larger expenditure values generally occur in the more populated segments.</p>
+<p>The median is the central value when the data is placed in numerical order, so in our example, it is midway between the fifth and sixth values. Placing the 10 values in order gives the following: 0, 0, 12, 14, 21, 24, 26, 33, 34, 56. The median is (21 + 24)/2 = 22.5. The median has half of the values below it and half above it. There are four quartiles, and the first quartile has 25% of the data below it; the third quartile has 75% of the data below it. The first and third quartiles are sometimes referred to as the lower and upper quartiles, respectively.</p>
+<p>Quartiles are a particular type of quantile. We can define other quantiles and will make use of sextiles which divide the data into six parts. Quantiles are usually calculated from sets of data with many more than 10 members.</p>
+<p>The measures of magnitude can be used to assess the distribution of interval (metric) data; if the difference between the median and the average value is large, then this indicates that the data variables:</p>
+<ul>
+<li>Are not Normally distributed</li>
+<li>May be skewed</li>
+<li>May have one or more outliers</li>
+</ul>
+<p>If there are outliers, then they must be considered in the analyses accordingly or be excluded. If Normal data is required, then a transformation may help.</p>
+<p>The dispersion measures show how variable the data values are. The dispersion measures commonly used in data mining are the range, inter-quartile range, variance and standard deviation. The range is the difference between the largest and smallest data values. In the aforementioned example, the range is 56 as this is the difference between 0 and 56. The inter-quartile range is the difference between the first and third quartiles. The variance is the square of the standard deviation, and both are important measures as they relate to calculations used in the Normal distribution. See standard statistical textbooks in the Bibliography for the relevant formulae.</p>
 
     </body>
     </html>
